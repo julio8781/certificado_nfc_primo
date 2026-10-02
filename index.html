@@ -5,82 +5,381 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#11100e">
 <title>Certificado de adquisición — Edición especial</title>
+
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
+
 *{box-sizing:border-box}
-body{margin:0;background:#0c0c0b;color:#eee;font-family:Inter,Arial,sans-serif;min-height:100vh;padding:22px}
-.wrap{max-width:760px;margin:auto}
-.certificate{position:relative;background:#f1eadb;color:#171613;padding:13px;box-shadow:0 25px 80px #000;border-radius:3px}
-.inner{border:1px solid #8d7651;outline:1px solid #8d7651;outline-offset:-7px;padding:58px 45px 48px;text-align:center;min-height:760px;position:relative}
-.corner{position:absolute;font-size:27px;color:#8d7651}.tl{top:17px;left:20px}.tr{top:17px;right:20px}.bl{bottom:17px;left:20px}.br{bottom:17px;right:20px}
-.eyebrow{font-size:11px;letter-spacing:4px;color:#80683f;font-weight:600}
-h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:54px;line-height:.95;margin:17px 0 5px;color:#161511}
-.subtitle{font-family:"Cormorant Garamond",Georgia,serif;font-size:22px;color:#66583f}
-.seal{width:105px;height:105px;border:2px solid #8d7651;border-radius:50%;margin:28px auto 22px;display:flex;align-items:center;justify-content:center;position:relative}
-.seal:before{content:"";position:absolute;inset:7px;border:1px solid #8d7651;border-radius:50%}
-.seal span{font-family:Georgia,serif;font-size:35px}
-.present{font-family:"Cormorant Garamond",Georgia,serif;font-size:25px;margin-top:18px}
-.name{font-family:"Cormorant Garamond",Georgia,serif;font-weight:700;font-size:38px;border-bottom:1px solid #8d7651;display:inline-block;padding:0 28px 6px;margin:5px 0 18px}
-.text{max-width:560px;margin:auto;font-family:"Cormorant Garamond",Georgia,serif;font-size:21px;line-height:1.45}
-.specs{display:flex;justify-content:center;gap:0;margin:28px auto;border-top:1px solid #b8a98c;border-bottom:1px solid #b8a98c;max-width:570px}
-.spec{padding:13px 22px;flex:1;border-right:1px solid #b8a98c}.spec:last-child{border:0}
-.spec b{display:block;font-size:18px;font-family:Georgia,serif}.spec small{font-size:9px;letter-spacing:1.5px;color:#786b55}
-.warning{background:#e4dac5;border-left:3px solid #8d7651;padding:13px 18px;margin:24px auto;max-width:560px;font-size:13px;line-height:1.5}
-.signature{display:flex;justify-content:space-between;align-items:end;max-width:560px;margin:34px auto 0;font-family:"Cormorant Garamond",Georgia,serif}
-.sigline{border-top:1px solid #75664d;width:190px;padding-top:6px;font-size:14px}
-.nfc{margin:18px auto 0;text-align:center;color:#aaa;font-size:10px;letter-spacing:2px}
-button{margin:18px auto 0;display:block;background:#9f7b43;border:0;color:white;padding:13px 22px;border-radius:6px;font-weight:600;cursor:pointer}
-@media(max-width:600px){body{padding:10px}.inner{padding:48px 22px 40px;min-height:auto}h1{font-size:42px}.name{font-size:31px}.spec{padding:11px 7px}.spec b{font-size:15px}.text{font-size:19px}.signature{gap:12px}.sigline{width:45%}}
-@media print{body{background:white;padding:0}.certificate{box-shadow:none}.nfc,button{display:none}}
+
+body{
+  margin:0;
+  background:#0c0c0b;
+  color:#eee;
+  font-family:Inter,Arial,sans-serif;
+  min-height:100vh;
+  padding:22px
+}
+
+.wrap{
+  max-width:760px;
+  margin:auto
+}
+
+.certificate{
+  position:relative;
+  background:#f1eadb;
+  color:#171613;
+  padding:13px;
+  box-shadow:0 25px 80px #000;
+  border-radius:3px
+}
+
+.inner{
+  border:1px solid #8d7651;
+  outline:1px solid #8d7651;
+  outline-offset:-7px;
+  padding:58px 45px 48px;
+  text-align:center;
+  min-height:820px;
+  position:relative
+}
+
+.corner{
+  position:absolute;
+  font-size:27px;
+  color:#8d7651
+}
+
+.tl{top:17px;left:20px}
+.tr{top:17px;right:20px}
+.bl{bottom:17px;left:20px}
+.br{bottom:17px;right:20px}
+
+.eyebrow{
+  font-size:11px;
+  letter-spacing:4px;
+  color:#80683f;
+  font-weight:600
+}
+
+h1{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:54px;
+  line-height:.95;
+  margin:17px 0 5px;
+  color:#161511
+}
+
+.subtitle{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:22px;
+  color:#66583f
+}
+
+.seal{
+  width:105px;
+  height:105px;
+  border:2px solid #8d7651;
+  border-radius:50%;
+  margin:28px auto 22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative
+}
+
+.seal:before{
+  content:"";
+  position:absolute;
+  inset:7px;
+  border:1px solid #8d7651;
+  border-radius:50%
+}
+
+.seal span{
+  font-family:Georgia,serif;
+  font-size:35px
+}
+
+.present{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:25px;
+  margin-top:18px
+}
+
+.name{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-weight:700;
+  font-size:48px;
+  letter-spacing:2px;
+  border-bottom:2px solid #8d7651;
+  display:inline-block;
+  padding:0 35px 7px;
+  margin:5px 0 18px;
+  color:#171511
+}
+
+.text{
+  max-width:560px;
+  margin:auto;
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:21px;
+  line-height:1.45
+}
+
+.specs{
+  display:flex;
+  justify-content:center;
+  gap:0;
+  margin:28px auto;
+  border-top:1px solid #b8a98c;
+  border-bottom:1px solid #b8a98c;
+  max-width:570px
+}
+
+.spec{
+  padding:13px 22px;
+  flex:1;
+  border-right:1px solid #b8a98c
+}
+
+.spec:last-child{
+  border:0
+}
+
+.spec b{
+  display:block;
+  font-size:18px;
+  font-family:Georgia,serif
+}
+
+.spec small{
+  font-size:9px;
+  letter-spacing:1.5px;
+  color:#786b55
+}
+
+.warning{
+  background:#e4dac5;
+  border-left:3px solid #8d7651;
+  padding:13px 18px;
+  margin:24px auto;
+  max-width:560px;
+  font-size:13px;
+  line-height:1.5
+}
+
+/* FIRMA */
+.signature{
+  max-width:600px;
+  margin:40px auto 0;
+  text-align:center;
+  font-family:"Cormorant Garamond",Georgia,serif
+}
+
+.signature-title{
+  font-size:13px;
+  letter-spacing:3px;
+  color:#80683f;
+  margin-bottom:5px
+}
+
+.signature-name{
+  font-family:"Cormorant Garamond",Georgia,serif;
+  font-size:38px;
+  font-weight:700;
+  letter-spacing:3px;
+  color:#171511;
+  margin-bottom:5px
+}
+
+.signature-role{
+  font-size:17px;
+  color:#66583f;
+  font-style:italic
+}
+
+.signature-line{
+  width:250px;
+  border-top:1px solid #75664d;
+  margin:12px auto 0
+}
+
+.nfc{
+  margin:18px auto 0;
+  text-align:center;
+  color:#aaa;
+  font-size:10px;
+  letter-spacing:2px
+}
+
+@media(max-width:600px){
+
+  body{
+    padding:10px
+  }
+
+  .inner{
+    padding:48px 22px 40px;
+    min-height:auto
+  }
+
+  h1{
+    font-size:42px
+  }
+
+  .name{
+    font-size:35px;
+    padding:0 15px 7px
+  }
+
+  .spec{
+    padding:11px 7px
+  }
+
+  .spec b{
+    font-size:15px
+  }
+
+  .text{
+    font-size:19px
+  }
+
+  .signature-name{
+    font-size:32px
+  }
+}
+
+@media print{
+
+  body{
+    background:white;
+    padding:0
+  }
+
+  .certificate{
+    box-shadow:none
+  }
+
+  .nfc{
+    display:none
+  }
+}
 </style>
 </head>
+
 <body>
+
 <div class="wrap">
+
   <div class="certificate">
+
     <div class="inner">
-      <div class="corner tl">✦</div><div class="corner tr">✦</div>
-      <div class="corner bl">✦</div><div class="corner br">✦</div>
 
-      <div class="eyebrow">DOCUMENTO OFICIAL · EDICIÓN DE CUMPLEAÑOS</div>
-      <h1>Certificado de<br>Adquisición Etílica</h1>
-      <div class="subtitle">Por la presente se acredita solemnemente que</div>
+      <div class="corner tl">✦</div>
+      <div class="corner tr">✦</div>
+      <div class="corner bl">✦</div>
+      <div class="corner br">✦</div>
 
-      <div class="seal"><span>🥃</span></div>
+      <div class="eyebrow">
+        DOCUMENTO OFICIAL · EDICIÓN DE CUMPLEAÑOS
+      </div>
 
-      <div class="present">El presente ejemplar ha sido concedido a</div>
-      <div class="name">[NOMBRE DEL PRIMO]</div>
+      <h1>
+        Certificado de<br>
+        Adquisición Etílica
+      </h1>
+
+      <div class="subtitle">
+        Por la presente se acredita solemnemente que
+      </div>
+
+      <div class="seal">
+        <span>🥃</span>
+      </div>
+
+      <div class="present">
+        El presente ejemplar ha sido concedido a
+      </div>
+
+      <div class="name">
+        ARNALDO ALVAREZ
+      </div>
 
       <div class="text">
         por haber sobrevivido con dignidad a otro año de vida y,
         por tanto, reunir los requisitos mínimos para recibir
-        <strong>una cantidad irresponsablemente generosa de whiskey.</strong>
+        <strong>
+          una cantidad irresponsablemente generosa de whiskey.
+        </strong>
       </div>
 
       <div class="specs">
-        <div class="spec"><b>1,75 L</b><small>CAPACIDAD</small></div>
-        <div class="spec"><b>40%</b><small>GRADUACIÓN</small></div>
-        <div class="spec"><b>01</b><small>AFORTUNADO</small></div>
+
+        <div class="spec">
+          <b>1,75 L</b>
+          <small>CAPACIDAD</small>
+        </div>
+
+        <div class="spec">
+          <b>40%</b>
+          <small>GRADUACIÓN</small>
+        </div>
+
+        <div class="spec">
+          <b>01</b>
+          <small>AFORTUNADO</small>
+        </div>
+
       </div>
 
       <div class="warning">
+
         <strong>CLÁUSULA IMPORTANTE:</strong><br>
+
         Este certificado autoriza oficialmente a abrir la botella,
         brindar, reírse y tomar decisiones que probablemente mañana
         requerirán una explicación.
+
       </div>
 
       <div class="text" style="font-size:18px">
+
         La botella es tuya.<br>
+
         El sentido común ya es cosa tuya.
+
       </div>
 
+      <!-- FIRMA DEL REGALADOR -->
+
       <div class="signature">
-        <div class="sigline">El primo que regala</div>
-        <div class="sigline">Fecha de expedición</div>
+
+        <div class="signature-title">
+          EXPEDIDO Y REGALADO POR
+        </div>
+
+        <div class="signature-name">
+          JULIO ALVAREZ
+        </div>
+
+        <div class="signature-role">
+          Primo · Autoridad competente en regalos cuestionables
+        </div>
+
+        <div class="signature-line"></div>
+
       </div>
+
     </div>
+
   </div>
-  <div class="nfc">ACCESO DESBLOQUEADO MEDIANTE NFC · EXPEDIENTE Nº 0175-JD</div>
+
+  <div class="nfc">
+    ACCESO DESBLOQUEADO MEDIANTE NFC · EXPEDIENTE Nº 0175-JD
+  </div>
+
 </div>
+
 </body>
 </html>
